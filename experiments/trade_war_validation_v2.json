@@ -1,0 +1,34 @@
+{
+  "pipeline_version": "global-base2000-v3",
+  "event": "2018 US-China Trade War + Made in China 2025",
+  "actual": {
+    "chn_2017": 531,
+    "chn_2023": 585,
+    "change": 54
+  },
+  "baseline": {
+    "chn_2017": 467,
+    "chn_2023": 453,
+    "change": -14
+  },
+  "gap": 68,
+  "scenarios": {
+    "trade_war_only": {
+      "chn_2023": 452,
+      "effect": -1
+    },
+    "mic2025_only": {
+      "chn_2023": 453,
+      "effect": 0
+    },
+    "both": {
+      "chn_2023": 452,
+      "effect": -1
+    }
+  },
+  "product_analysis": {
+    "actual_gained": 87,
+    "model_missed": 74,
+    "mic_covered": 0
+  }
+}

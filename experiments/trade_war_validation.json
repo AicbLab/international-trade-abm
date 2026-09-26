@@ -1,0 +1,35 @@
+{
+  "pipeline_version": "global-base2000-v3",
+  "event": "2018 US-China Trade War",
+  "actual_analysis": {
+    "div_2017": 531,
+    "div_2023": 585,
+    "lost": 33,
+    "gained": 87
+  },
+  "trade_war_simulation": {
+    "actual_2023": 585,
+    "baseline_2023": 453,
+    "trade_war_2023": 452,
+    "war_effect": -1,
+    "baseline_error": -132,
+    "war_error": -133,
+    "lost_products": [
+      "8541"
+    ]
+  },
+  "counterfactual": {
+    "actual_change": 54,
+    "baseline_change": -14,
+    "gap": 68
+  },
+  "targets_used": [
+    "8542",
+    "8541",
+    "8534",
+    "8536",
+    "8537"
+  ],
+  "start_year": 2018,
+  "blockade_strength": 0.2
+}
