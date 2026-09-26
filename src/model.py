@@ -99,6 +99,7 @@ class PolicyConfig:
     tariff_targets: list[str] = field(default_factory=list)
     tariff_rate: float = 0.0
     tariff_elasticity: float = 1.0
+    blockade_spillover: float = 0.0  # 封锁溢出系数 [0.0, 1.0]：语义邻近产品受封锁影响的比例
 
     def __post_init__(self):
         values = [self.subsidy_strength, self.functional_boost, self.blockade_strength,
@@ -111,7 +112,8 @@ class PolicyConfig:
 
 class PolicyModule:
     def __init__(self, products: list[str], config: PolicyConfig,
-                 resource_mask: np.ndarray | None = None):
+                 resource_mask: np.ndarray | None = None,
+                 semantic_phi: np.ndarray | None = None):
         self.products = products
         self.config = config
         self.p_idx = {p: i for i, p in enumerate(products)}
@@ -137,6 +139,17 @@ class PolicyModule:
         for p in config.blockade_targets:
             if p in self.p_idx:
                 self.decay_prob[self.p_idx[p]] = config.blockade_strength
+        # 封锁语义溢出：目标产品的封锁效果扩散到语义邻近产品
+        if config.blockade_spillover > 0 and semantic_phi is not None and config.blockade_targets:
+            target_mask = np.zeros(P, dtype=bool)
+            for p in config.blockade_targets:
+                if p in self.p_idx:
+                    target_mask[self.p_idx[p]] = True
+            # 每个产品受封锁溢出 = max(与目标产品的语义proximity) × spillover系数
+            spillover = semantic_phi[:, target_mask].max(axis=1) * config.blockade_spillover
+            # 目标产品本身不受溢出影响（已有直接封锁）
+            spillover[target_mask] = 0
+            self.decay_prob = np.maximum(self.decay_prob, spillover * config.blockade_strength)
 
     def multiplier(self) -> np.ndarray:
         return self.invest_mult
@@ -195,7 +208,15 @@ class CountryAgent(mesa.Agent):
             leader = int(np.argmax(scores))
             gap = model._snapshot[leader].astype(bool) & eligible & ~new
             if gap.any():
-                candidate = int(np.argmax(np.where(gap, imitation_selection, -1.)))
+                # 语义加权模仿：优先模仿与自己现有能力语义接近的产品
+                if model._sem_phi is not None:
+                    sem_weights = model._sem_phi[gap][:, old].max(axis=1) if old.any() else np.ones(gap.sum())
+                    sem_weights = np.maximum(sem_weights, 1e-10)
+                    # 用语义权重调整模仿选择概率
+                    adjusted = imitation_selection[gap] / sem_weights
+                    candidate = np.flatnonzero(gap)[np.argmin(adjusted)]
+                else:
+                    candidate = int(np.argmax(np.where(gap, imitation_selection, -1.)))
                 # 模仿每步最多新增一个产品，也受资源与政策约束。
                 prob = np.clip(self.tech_level * mult[candidate] + boost, 0, 1)
                 if success[candidate] < prob:
@@ -208,16 +229,35 @@ class CountryAgent(mesa.Agent):
         if abs(trend) > 0:
             trend_attempts = int(abs(trend)) + (1 if trend_draw < abs(trend) % 1 else 0)
             if trend > 0:
-                # 正趋势：随机新增能力
+                # 正趋势：语义引导新增能力（优先语义接近现有能力的产品）
                 pool = np.flatnonzero(~new & model.policy.investable_mask())
                 if trend_attempts > 0 and len(pool) > 0:
-                    picks = self._rng.choice(pool, size=min(trend_attempts, len(pool)), replace=False)
+                    if model._sem_phi is not None and old.any():
+                        sem_w = model._sem_phi[pool][:, old].max(axis=1)
+                        sem_w = np.maximum(sem_w, 1e-10)
+                        picks_idx = self._rng.choice(len(pool), size=min(trend_attempts, len(pool)),
+                                                     replace=False, p=sem_w / sem_w.sum())
+                        picks = pool[picks_idx]
+                    else:
+                        picks = self._rng.choice(pool, size=min(trend_attempts, len(pool)), replace=False)
                     new[picks] = True
             else:
-                # 负趋势：随机移除能力
+                # 负趋势：语义引导移除能力（优先移除语义最边缘的产品）
                 pool = np.flatnonzero(new)
                 if trend_attempts > 0 and len(pool) > 0:
-                    picks = self._rng.choice(pool, size=min(trend_attempts, len(pool)), replace=False)
+                    if model._sem_phi is not None and (new & ~np.zeros(p, dtype=bool)).sum() > 1:
+                        other = new.copy()
+                        sem_edge = np.ones(len(pool))
+                        for i, pi in enumerate(pool):
+                            others_mask = new.copy(); others_mask[pi] = False
+                            if others_mask.any():
+                                sem_edge[i] = 1.0 - model._sem_phi[pi][others_mask].max()
+                        sem_edge = np.maximum(sem_edge, 1e-10)
+                        picks_idx = self._rng.choice(len(pool), size=min(trend_attempts, len(pool)),
+                                                     replace=False, p=sem_edge / sem_edge.sum())
+                        picks = pool[picks_idx]
+                    else:
+                        picks = self._rng.choice(pool, size=min(trend_attempts, len(pool)), replace=False)
                     new[picks] = False
         self.capabilities = new.astype(np.uint8)
         # ECI映射技术代理保持基年值，避免无数据支撑的自动技术增长。
@@ -241,6 +281,7 @@ class ComplexityABM(mesa.Model):
         depreciation_rate: float = 0.005,
         resource_mask: np.ndarray | None = None,
         growth_trend: dict[str, float] | None = None,
+        semantic_phi: np.ndarray | None = None,
         seed: int = 42,
     ):
         super().__init__(rng=seed)
@@ -276,12 +317,15 @@ class ComplexityABM(mesa.Model):
             product_space.products,
             policy_config or PolicyConfig(),
             resource_mask=resource_mask,
+            semantic_phi=semantic_phi,
         )
         self._history: list[dict[str, Any]] = []
         # 记录初始能力（用于防止退化到比初始还差）
         self._initial_caps = {iso3: caps.copy() for iso3, caps in initial_capabilities.items()}
         # 国家增长趋势（从历史数据计算的年均多样性变化）
         self._growth_trend = growth_trend or {}
+        # 语义 proximity 矩阵（用于语义加权模仿、语义引导趋势、封锁溢出）
+        self._sem_phi = semantic_phi
 
         # 创建智能体
         for iso3 in self.countries:

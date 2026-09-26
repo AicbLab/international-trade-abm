@@ -1,0 +1,112 @@
+{
+  "pipeline_version": "global-base2000-v3",
+  "ablation": {
+    "A_base": {
+      "sem_imitation": false,
+      "sem_trend": false,
+      "phi": "stat",
+      "final_mae": 18.583333333333332,
+      "holdout_mae": 18.052083333333332,
+      "chn_err": -60,
+      "time": 0.1
+    },
+    "B_stat+sem": {
+      "sem_imitation": false,
+      "sem_trend": false,
+      "phi": "blend",
+      "final_mae": 17.875,
+      "holdout_mae": 17.520833333333332,
+      "chn_err": -57,
+      "time": 0.1
+    },
+    "C_sem_imi": {
+      "sem_imitation": true,
+      "sem_trend": false,
+      "phi": "blend",
+      "final_mae": 16.583333333333332,
+      "holdout_mae": 17.020833333333332,
+      "chn_err": -58,
+      "time": 0.8
+    },
+    "D_sem_trend": {
+      "sem_imitation": false,
+      "sem_trend": true,
+      "phi": "blend",
+      "final_mae": 16.583333333333332,
+      "holdout_mae": 17.020833333333332,
+      "chn_err": -58,
+      "time": 0.8
+    },
+    "E_both_sem": {
+      "sem_imitation": true,
+      "sem_trend": true,
+      "phi": "blend",
+      "final_mae": 16.583333333333332,
+      "holdout_mae": 17.020833333333332,
+      "chn_err": -58,
+      "time": 0.8
+    }
+  },
+  "trade_war": {
+    "no_war": {
+      "chn_2023": 527,
+      "time": 0.8
+    },
+    "semi_block": {
+      "chn_2023": 526,
+      "time": 0.7,
+      "effect": -1
+    },
+    "broad_block": {
+      "chn_2023": 519,
+      "time": 0.8,
+      "effect": -8
+    },
+    "broad_spill": {
+      "chn_2023": 518,
+      "time": 0.8,
+      "effect": -9
+    },
+    "strong_spill": {
+      "chn_2023": 493,
+      "time": 0.8,
+      "effect": -34
+    }
+  },
+  "robustness": {
+    "stat_no_sem": {
+      "mean": 18.035416666666663,
+      "std": 0.7667643166978437,
+      "values": [
+        18.052083333333332,
+        18.015625,
+        17.067708333333332,
+        19.395833333333332,
+        17.645833333333332
+      ]
+    },
+    "blend_no_sem": {
+      "mean": 17.5875,
+      "std": 0.6054798946106944,
+      "values": [
+        17.520833333333332,
+        17.385416666666668,
+        16.770833333333332,
+        18.645833333333332,
+        17.614583333333332
+      ]
+    },
+    "blend_sem": {
+      "mean": 17.515625,
+      "std": 0.5433068117248919,
+      "values": [
+        17.020833333333332,
+        16.880208333333332,
+        17.583333333333332,
+        18.40625,
+        17.6875
+      ]
+    }
+  },
+  "chn_actual": 585
+}
