@@ -1,0 +1,352 @@
+{
+  "pipeline_version": "global-base2000-v4",
+  "n_countries": 231,
+  "diversity": {
+    "top_growth": [
+      {
+        "country": "SRB",
+        "sem_div_2000": 0.0,
+        "sem_div_2023": 296.6866381103448,
+        "sd_change": 296.6866381103448,
+        "growth_type": "quality"
+      },
+      {
+        "country": "CUW",
+        "sem_div_2000": 0.0,
+        "sem_div_2023": 161.81683270094436,
+        "sd_change": 161.81683270094436,
+        "growth_type": "quality"
+      },
+      {
+        "country": "TUR",
+        "sem_div_2000": 329.7926235255471,
+        "sem_div_2023": 451.0820312324966,
+        "sd_change": 121.28940770694948,
+        "growth_type": "quality"
+      },
+      {
+        "country": "IRN",
+        "sem_div_2000": 94.20716371469624,
+        "sem_div_2023": 208.937434754534,
+        "sd_change": 114.73027103983776,
+        "growth_type": "quality"
+      },
+      {
+        "country": "LTU",
+        "sem_div_2000": 225.9903621359272,
+        "sem_div_2023": 331.3732844687309,
+        "sd_change": 105.3829223328037,
+        "growth_type": "quality"
+      },
+      {
+        "country": "LVA",
+        "sem_div_2000": 214.88233694754805,
+        "sem_div_2023": 316.5618302274132,
+        "sd_change": 101.67949327986517,
+        "growth_type": "quality"
+      },
+      {
+        "country": "MNE",
+        "sem_div_2000": 0.0,
+        "sem_div_2023": 97.03972732972241,
+        "sd_change": 97.03972732972241,
+        "growth_type": "quality"
+      },
+      {
+        "country": "PRT",
+        "sem_div_2000": 318.1567011160958,
+        "sem_div_2023": 413.6921768273603,
+        "sd_change": 95.5354757112645,
+        "growth_type": "quality"
+      },
+      {
+        "country": "EGY",
+        "sem_div_2000": 208.12477646159675,
+        "sem_div_2023": 295.23021582989264,
+        "sd_change": 87.10543936829589,
+        "growth_type": "quality"
+      },
+      {
+        "country": "VNM",
+        "sem_div_2000": 210.87428992260146,
+        "sem_div_2023": 290.4958789369507,
+        "sd_change": 79.62158901434924,
+        "growth_type": "quality"
+      }
+    ],
+    "top_loss": [
+      {
+        "country": "HKG",
+        "sem_div_2000": 330.5266646357898,
+        "sem_div_2023": 136.40368391438554,
+        "sd_change": -194.12298072140428,
+        "growth_type": "loss"
+      },
+      {
+        "country": "PAN",
+        "sem_div_2000": 223.17420039927063,
+        "sem_div_2023": 76.1350993988438,
+        "sd_change": -147.03910100042683,
+        "growth_type": "loss"
+      },
+      {
+        "country": "ZWE",
+        "sem_div_2000": 198.32733440161488,
+        "sem_div_2023": 58.367702150123584,
+        "sd_change": -139.95963225149129,
+        "growth_type": "loss"
+      },
+      {
+        "country": "ZAF",
+        "sem_div_2000": 358.2638215672964,
+        "sem_div_2023": 219.1493345063827,
+        "sd_change": -139.11448706091372,
+        "growth_type": "loss"
+      },
+      {
+        "country": "CHE",
+        "sem_div_2000": 316.2671908428919,
+        "sem_div_2023": 184.0971599305739,
+        "sd_change": -132.17003091231803,
+        "growth_type": "loss"
+      },
+      {
+        "country": "AUS",
+        "sem_div_2000": 244.47227521449747,
+        "sem_div_2023": 122.70606443531369,
+        "sd_change": -121.76621077918378,
+        "growth_type": "loss"
+      },
+      {
+        "country": "DJI",
+        "sem_div_2000": 277.8931042690672,
+        "sem_div_2023": 161.31595073818477,
+        "sd_change": -116.57715353088241,
+        "growth_type": "loss"
+      },
+      {
+        "country": "PRK",
+        "sem_div_2000": 208.97816653989233,
+        "sem_div_2023": 95.29002292822564,
+        "sd_change": -113.68814361166669,
+        "growth_type": "loss"
+      },
+      {
+        "country": "ERI",
+        "sem_div_2000": 122.65272703819751,
+        "sem_div_2023": 10.782199324649952,
+        "sd_change": -111.87052771354756,
+        "growth_type": "loss"
+      },
+      {
+        "country": "USA",
+        "sem_div_2000": 471.5611271931251,
+        "sem_div_2023": 360.0141734766267,
+        "sd_change": -111.54695371649842,
+        "growth_type": "loss"
+      }
+    ],
+    "type_distribution": {
+      "loss": 122,
+      "quality": 108,
+      "stable": 1
+    }
+  },
+  "clusters": {
+    "n_clusters": 10,
+    "cluster_sizes": {
+      "10": 992,
+      "4": 79,
+      "6": 34,
+      "3": 31,
+      "7": 24,
+      "1": 20,
+      "9": 17,
+      "5": 16,
+      "2": 15,
+      "8": 14
+    }
+  },
+  "profiles": [
+    {
+      "country": "CHN",
+      "n_products": 585,
+      "avg_sem_proximity": 0.00817944607379529,
+      "sem_uniqueness": 0.9946938426247101
+    },
+    {
+      "country": "ITA",
+      "n_products": 535,
+      "avg_sem_proximity": 0.008205127970882378,
+      "sem_uniqueness": 0.9942115321274372
+    },
+    {
+      "country": "ESP",
+      "n_products": 521,
+      "avg_sem_proximity": 0.007431297870477516,
+      "sem_uniqueness": 0.9941959362987406
+    },
+    {
+      "country": "DEU",
+      "n_products": 498,
+      "avg_sem_proximity": 0.007822390834423907,
+      "sem_uniqueness": 0.9942958784243204
+    },
+    {
+      "country": "FRA",
+      "n_products": 484,
+      "avg_sem_proximity": 0.006839229696698085,
+      "sem_uniqueness": 0.993885511090656
+    },
+    {
+      "country": "POL",
+      "n_products": 468,
+      "avg_sem_proximity": 0.007304155809560831,
+      "sem_uniqueness": 0.9941040994269865
+    },
+    {
+      "country": "TUR",
+      "n_products": 455,
+      "avg_sem_proximity": 0.008591995268429131,
+      "sem_uniqueness": 0.9941065595051441
+    },
+    {
+      "country": "NLD",
+      "n_products": 437,
+      "avg_sem_proximity": 0.007621222323096032,
+      "sem_uniqueness": 0.9945009076529367
+    },
+    {
+      "country": "IND",
+      "n_products": 417,
+      "avg_sem_proximity": 0.00763042282291455,
+      "sem_uniqueness": 0.9941913677215521
+    },
+    {
+      "country": "PRT",
+      "n_products": 417,
+      "avg_sem_proximity": 0.00791340705747987,
+      "sem_uniqueness": 0.9938005944488488
+    },
+    {
+      "country": "DNK",
+      "n_products": 413,
+      "avg_sem_proximity": 0.00769841677631418,
+      "sem_uniqueness": 0.9940394373023533
+    },
+    {
+      "country": "AUT",
+      "n_products": 394,
+      "avg_sem_proximity": 0.008854558282968576,
+      "sem_uniqueness": 0.993875518759968
+    },
+    {
+      "country": "BEL",
+      "n_products": 392,
+      "avg_sem_proximity": 0.00790843214551585,
+      "sem_uniqueness": 0.9942885135052213
+    },
+    {
+      "country": "USA",
+      "n_products": 363,
+      "avg_sem_proximity": 0.00820275786764066,
+      "sem_uniqueness": 0.9941060743229753
+    },
+    {
+      "country": "CZE",
+      "n_products": 362,
+      "avg_sem_proximity": 0.008225657933254582,
+      "sem_uniqueness": 0.9940271064542624
+    },
+    {
+      "country": "BGR",
+      "n_products": 335,
+      "avg_sem_proximity": 0.007656092396715484,
+      "sem_uniqueness": 0.9937719695310421
+    },
+    {
+      "country": "LTU",
+      "n_products": 334,
+      "avg_sem_proximity": 0.007840871597337717,
+      "sem_uniqueness": 0.9939448720977189
+    },
+    {
+      "country": "HRV",
+      "n_products": 327,
+      "avg_sem_proximity": 0.007802503445315134,
+      "sem_uniqueness": 0.9938825501952057
+    },
+    {
+      "country": "THA",
+      "n_products": 325,
+      "avg_sem_proximity": 0.00802973300942915,
+      "sem_uniqueness": 0.9937108720170585
+    },
+    {
+      "country": "JPN",
+      "n_products": 321,
+      "avg_sem_proximity": 0.009754567137336571,
+      "sem_uniqueness": 0.9941326223561003
+    },
+    {
+      "country": "LVA",
+      "n_products": 319,
+      "avg_sem_proximity": 0.0076192056650641205,
+      "sem_uniqueness": 0.9939302865050841
+    },
+    {
+      "country": "SWE",
+      "n_products": 314,
+      "avg_sem_proximity": 0.008425084983565572,
+      "sem_uniqueness": 0.994065939692376
+    },
+    {
+      "country": "GBR",
+      "n_products": 312,
+      "avg_sem_proximity": 0.007987785377169671,
+      "sem_uniqueness": 0.9939305763811732
+    },
+    {
+      "country": "EST",
+      "n_products": 306,
+      "avg_sem_proximity": 0.00749338805141456,
+      "sem_uniqueness": 0.9938654325015944
+    },
+    {
+      "country": "SRB",
+      "n_products": 299,
+      "avg_sem_proximity": 0.007711120044711376,
+      "sem_uniqueness": 0.9938014657453617
+    },
+    {
+      "country": "EGY",
+      "n_products": 298,
+      "avg_sem_proximity": 0.009263387893809778,
+      "sem_uniqueness": 0.9941125051004492
+    },
+    {
+      "country": "VNM",
+      "n_products": 293,
+      "avg_sem_proximity": 0.0085173193678482,
+      "sem_uniqueness": 0.9941268371747037
+    },
+    {
+      "country": "ROU",
+      "n_products": 289,
+      "avg_sem_proximity": 0.008111869422137534,
+      "sem_uniqueness": 0.9937268520835408
+    },
+    {
+      "country": "HUN",
+      "n_products": 269,
+      "avg_sem_proximity": 0.007734157392819318,
+      "sem_uniqueness": 0.9937660013152447
+    },
+    {
+      "country": "KOR",
+      "n_products": 262,
+      "avg_sem_proximity": 0.01015428282372274,
+      "sem_uniqueness": 0.9938981236229122
+    }
+  ]
+}
