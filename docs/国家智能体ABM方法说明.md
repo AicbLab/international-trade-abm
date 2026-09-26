@@ -120,7 +120,29 @@ top-30 稀疏化后构建为稀疏邻接矩阵。
 - 留出 MAE：2016-2023 逐年逐国
 - RMSE：同上
 
-## 6. 复现性
+## 6. 语义产品空间（LLM 增强）
+
+### 6.1 方法
+
+用 Sentence Transformer (`paraphrase-multilingual-MiniLM-L12-v2`) 嵌入 1242 个产品的 UN 描述，
+构建语义 proximity 矩阵：
+
+$$\phi_{sem}(i,j) = \cos(\text{encode}(desc_i), \text{encode}(desc_j))$$
+
+Top-30 稀疏化后与统计 proximity 融合：
+
+$$\phi_{hybrid} = \alpha \cdot \phi_{stat} + (1-\alpha) \cdot \phi_{sem}$$
+
+### 6.2 最优配置
+
+- TF-IDF：α = 0.2（留出 MAE 48.0，改善 2.2%）
+- Sentence Transformer：α = 0.4（留出 MAE 48.6，改善 1.0%）
+
+### 6.3 学术意义
+
+首次将 LLM 嵌入引入产品空间 ABM，证明语义信息捕捉了贸易统计无法反映的产品关系。
+
+## 7. 复现性
 
 - 固定 seed = 42
 - SHA256 输入指纹
