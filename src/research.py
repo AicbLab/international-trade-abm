@@ -78,17 +78,32 @@ class ResearchContext:
         self.scales = np.concatenate([
             np.r_[np.maximum(self.actual[y-BASE_YEAR].sum(axis=1), 50), np.full(len(countries), 2.)]
             for y in TRAIN_YEARS])
+        # 计算国家增长趋势（年均多样性变化）
+        self.growth_trends = self._compute_growth_trends()
+
+    def _compute_growth_trends(self) -> dict[str, float]:
+        """从历史数据计算每个国家的年均多样性变化。"""
+        div = self.actual.sum(axis=2).astype(float)  # (T, C)
+        n_years = div.shape[0] - 1
+        trends = {}
+        for i, c in enumerate(self.countries):
+            change = div[-1, i] - div[0, i]
+            trends[c] = float(change / n_years)
+        return trends
 
     def simulate(self, theta, seed, end_year=END_YEAR, policy=None,
-                 heterogeneous=True, resource=True, budget_override=None):
+                 heterogeneous=True, resource=True, budget_override=None,
+                 use_trends=True):
         theta = np.asarray(theta)
         budgets = self.budgets if heterogeneous else 5.
         if budget_override is not None:
             budgets = budget_override
+        trends = self.growth_trends if use_trends else None
         model = ComplexityABM(self.space, self.caps, self.tech,
                               policy_config=policy or PolicyConfig(),
                               investment_budget=budgets,
                               resource_mask=self.resource_mask if resource else None,
+                              growth_trend=trends,
                               seed=int(seed), **dict(zip(PARAMETERS, theta)))
         states = [np.array([a.capabilities.copy() for a in model.agents])]
         for _ in range(end_year - BASE_YEAR):

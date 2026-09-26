@@ -1,0 +1,17 @@
+{
+  "pipeline_version": "global-base2000-v3",
+  "model": "trend-corrected",
+  "chn_2023": {
+    "actual": 585,
+    "baseline": 525,
+    "semi_blockade": 524,
+    "broad_blockade": 519,
+    "strong_blockade": 517
+  },
+  "effects": {
+    "semi_blockade": -1,
+    "broad_blockade": -6,
+    "strong_blockade": -8
+  },
+  "mean_mae": 18.583333333333332
+}

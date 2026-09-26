@@ -171,6 +171,7 @@ class CountryAgent(mesa.Agent):
         # 每步固定消耗随机数，配对政策实验不会因分支跳过而错位。
         selection, success, imitation_selection, decay_draw = self._rng.random((4, p))
         frac_draw, imitate_draw = self._rng.random(2)
+        trend_draw = self._rng.random()
         old = model._snapshot[self.index].astype(bool)
         new = old.copy()
         cfg = model.policy.config
@@ -202,6 +203,22 @@ class CountryAgent(mesa.Agent):
         policy_decay = model.policy.decay() if active else np.zeros(p)
         loss = 1 - (1 - model.depreciation_rate) * (1 - policy_decay)
         new[decay_draw < loss] = False
+        # 增长趋势修正：捕捉模型未建模的国家特定动态（产业政策、制度因素等）
+        trend = model._growth_trend.get(self.iso3, 0.0)
+        if abs(trend) > 0:
+            trend_attempts = int(abs(trend)) + (1 if trend_draw < abs(trend) % 1 else 0)
+            if trend > 0:
+                # 正趋势：随机新增能力
+                pool = np.flatnonzero(~new & model.policy.investable_mask())
+                if trend_attempts > 0 and len(pool) > 0:
+                    picks = self._rng.choice(pool, size=min(trend_attempts, len(pool)), replace=False)
+                    new[picks] = True
+            else:
+                # 负趋势：随机移除能力
+                pool = np.flatnonzero(new)
+                if trend_attempts > 0 and len(pool) > 0:
+                    picks = self._rng.choice(pool, size=min(trend_attempts, len(pool)), replace=False)
+                    new[picks] = False
         self.capabilities = new.astype(np.uint8)
         # ECI映射技术代理保持基年值，避免无数据支撑的自动技术增长。
 
@@ -223,6 +240,7 @@ class ComplexityABM(mesa.Model):
         investment_budget: float | dict[str, float] = 5.0,
         depreciation_rate: float = 0.005,
         resource_mask: np.ndarray | None = None,
+        growth_trend: dict[str, float] | None = None,
         seed: int = 42,
     ):
         super().__init__(rng=seed)
@@ -262,6 +280,8 @@ class ComplexityABM(mesa.Model):
         self._history: list[dict[str, Any]] = []
         # 记录初始能力（用于防止退化到比初始还差）
         self._initial_caps = {iso3: caps.copy() for iso3, caps in initial_capabilities.items()}
+        # 国家增长趋势（从历史数据计算的年均多样性变化）
+        self._growth_trend = growth_trend or {}
 
         # 创建智能体
         for iso3 in self.countries:

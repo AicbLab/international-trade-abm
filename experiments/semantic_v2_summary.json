@@ -1,0 +1,118 @@
+{
+  "pipeline_version": "global-base2000-v3",
+  "model": "trend-corrected",
+  "baseline": {
+    "holdout_mae": 18.052083333333332,
+    "final_mae": 18.583333333333332
+  },
+  "methods": {
+    "tfidf": {
+      "results": [
+        {
+          "alpha": 0.0,
+          "final_mae": 18.458333333333332,
+          "holdout_mae": 18.119791666666668
+        },
+        {
+          "alpha": 0.2,
+          "final_mae": 18.0,
+          "holdout_mae": 17.791666666666668
+        },
+        {
+          "alpha": 0.4,
+          "final_mae": 18.208333333333332,
+          "holdout_mae": 18.276041666666668
+        },
+        {
+          "alpha": 0.6,
+          "final_mae": 17.958333333333332,
+          "holdout_mae": 17.973958333333332
+        },
+        {
+          "alpha": 0.8,
+          "final_mae": 17.875,
+          "holdout_mae": 17.520833333333332
+        },
+        {
+          "alpha": 1.0,
+          "final_mae": 18.583333333333332,
+          "holdout_mae": 18.052083333333332
+        }
+      ],
+      "best_alpha": 0.8,
+      "best_holdout": 17.520833333333332
+    },
+    "qwen": {
+      "results": [
+        {
+          "alpha": 0.0,
+          "final_mae": 19.625,
+          "holdout_mae": 18.963541666666668
+        },
+        {
+          "alpha": 0.2,
+          "final_mae": 18.75,
+          "holdout_mae": 18.239583333333332
+        },
+        {
+          "alpha": 0.4,
+          "final_mae": 18.333333333333332,
+          "holdout_mae": 17.979166666666668
+        },
+        {
+          "alpha": 0.6,
+          "final_mae": 18.0,
+          "holdout_mae": 17.640625
+        },
+        {
+          "alpha": 0.8,
+          "final_mae": 18.333333333333332,
+          "holdout_mae": 17.817708333333332
+        },
+        {
+          "alpha": 1.0,
+          "final_mae": 18.583333333333332,
+          "holdout_mae": 18.052083333333332
+        }
+      ],
+      "best_alpha": 0.6,
+      "best_holdout": 17.640625
+    },
+    "st": {
+      "results": [
+        {
+          "alpha": 0.0,
+          "final_mae": 20.125,
+          "holdout_mae": 19.098958333333332
+        },
+        {
+          "alpha": 0.2,
+          "final_mae": 19.833333333333332,
+          "holdout_mae": 18.9375
+        },
+        {
+          "alpha": 0.4,
+          "final_mae": 18.916666666666668,
+          "holdout_mae": 18.067708333333332
+        },
+        {
+          "alpha": 0.6,
+          "final_mae": 18.833333333333332,
+          "holdout_mae": 18.067708333333332
+        },
+        {
+          "alpha": 0.8,
+          "final_mae": 18.541666666666668,
+          "holdout_mae": 17.989583333333332
+        },
+        {
+          "alpha": 1.0,
+          "final_mae": 18.583333333333332,
+          "holdout_mae": 18.052083333333332
+        }
+      ],
+      "best_alpha": 0.8,
+      "best_holdout": 17.989583333333332
+    }
+  }
+}
