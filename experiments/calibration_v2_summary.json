@@ -1,0 +1,39 @@
+{
+  "pipeline_version": "global-base2000-v3",
+  "particles": 200,
+  "generations": 10,
+  "repeats": 2,
+  "seed": 42,
+  "target_dim": 18,
+  "complete": true,
+  "theta_star": {
+    "learning_rate": 0.5943499643435362,
+    "imitation_rate": 0.2557861611826984,
+    "depreciation_rate": 0.0149282628218493
+  },
+  "theta_default": {
+    "learning_rate": 0.05,
+    "imitation_rate": 0.1,
+    "depreciation_rate": 0.005
+  },
+  "calibrated": {
+    "holdout_mae": 51.171875,
+    "final_mae": 60.708333333333336
+  },
+  "default": {
+    "holdout_mae": 49.104166666666664,
+    "final_mae": 57.958333333333336
+  },
+  "epsilon_trajectory": [
+    13.23813384544121,
+    13.19764591519949,
+    13.148068189802732,
+    13.143810659703401,
+    12.98373038948195,
+    12.936008872560311,
+    12.419176806097292,
+    12.310399840343882,
+    12.234815406818512,
+    12.033703083919827
+  ]
+}

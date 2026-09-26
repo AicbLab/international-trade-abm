@@ -1,0 +1,61 @@
+{
+  "pipeline_version": "global-base2000-v3",
+  "default_theta": {
+    "learning_rate": 0.05,
+    "imitation_rate": 0.1,
+    "depreciation_rate": 0.005
+  },
+  "seed": 42,
+  "budget_comparison": {
+    "homogeneous": {
+      "final_mae": 58.333333333333336,
+      "final_rmse": 69.7614984548545,
+      "holdout_mae": 49.442708333333336,
+      "mean_diversity": 182.04166666666666
+    },
+    "heterogeneous": {
+      "final_mae": 57.958333333333336,
+      "final_rmse": 69.59675519256147,
+      "holdout_mae": 49.104166666666664,
+      "mean_diversity": 182.91666666666666
+    }
+  },
+  "benchmarks": {
+    "naive_persistence": 52.125,
+    "linear_extrapolation": 71.5,
+    "global_mean": 91.625,
+    "abm_default": 57.958333333333336
+  },
+  "policy_default": {
+    "A_subsidy_CHN_strong": {
+      "diff_CHN": 0,
+      "strength": 5.0,
+      "start": 1
+    },
+    "B_blockade_CHN_strong": {
+      "diff_CHN": -4,
+      "strength": 0.5,
+      "targets": 4,
+      "start": 1
+    },
+    "C_tariff_ASEAN_strong": {
+      "country_diffs": {
+        "VNM": 0,
+        "IDN": 0,
+        "BGD": 0,
+        "KHM": 0,
+        "MMR": 0
+      },
+      "rate": 0.5,
+      "elasticity": 1.5,
+      "targets": 6,
+      "start": 1
+    },
+    "D_full_blockade_CHN": {
+      "diff_CHN": -11,
+      "n_targets": 50,
+      "strength": 0.3,
+      "start": 1
+    }
+  }
+}
