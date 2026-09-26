@@ -122,29 +122,79 @@ top-30 稀疏化后构建为稀疏邻接矩阵。
 
 ## 6. 语义产品空间（LLM 增强）
 
-### 6.1 方法
+### 6.1 方法概述
 
-用 Sentence Transformer (`paraphrase-multilingual-MiniLM-L12-v2`) 嵌入 1242 个产品的 UN 描述，
-构建语义 proximity 矩阵：
-
-$$\phi_{sem}(i,j) = \cos(\text{encode}(desc_i), \text{encode}(desc_j))$$
-
-Top-30 稀疏化后与统计 proximity 融合：
+用三种嵌入方法对 1242 个产品的 UN 英文描述（来源 `hs92_hs4_product_lookup.csv`）编码，
+构建语义 proximity 矩阵，与统计 proximity 融合：
 
 $$\phi_{hybrid} = \alpha \cdot \phi_{stat} + (1-\alpha) \cdot \phi_{sem}$$
 
-### 6.2 三种嵌入方法对比
+所有方法共享后处理流程：
+1. 计算余弦相似度矩阵 $\phi_{sem}(i,j) = \cos(\mathbf{e}_i, \mathbf{e}_j)$
+2. 对角线置零
+3. Top-30 稀疏化（每行仅保留相似度最高的 30 个邻居）
+4. 对称化：$\phi_{sem} \leftarrow (\phi_{sem} + \phi_{sem}^T) / 2$
+5. 截断到 $[0, 1]$
+
+### 6.2 方法 A：千问 Qwen text-embedding-v2
+
+| 参数 | 值 |
+|---|---|
+| **模型名称** | `text-embedding-v2` |
+| **提供商** | 阿里云 DashScope API |
+| **SDK** | `dashscope >= 1.20`（`TextEmbedding.call()`） |
+| **嵌入维度** | 1536 |
+| **输入** | 1242 条 UN 产品英文描述 |
+| **批处理** | batch_size = 25，每批间隔 0.1s（限速） |
+| **归一化** | L2 归一化后计算点积（等价余弦相似度） |
+| **Top-K** | 30 |
+| **API 调用** | `TextEmbedding.call(model='text-embedding-v2', input=batch, dimension=1536)` |
+
+### 6.3 方法 B：Sentence Transformer
+
+| 参数 | 值 |
+|---|---|
+| **模型名称** | `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` |
+| **架构** | Transformer encoder, 12 层 |
+| **最大序列长度** | 128 tokens |
+| **嵌入维度** | 384 |
+| **训练数据** | 多语言平行语料（50+ 语言） |
+| **归一化** | `normalize_embeddings=True`（L2 归一化） |
+| **相似度** | 点积（归一化后等价余弦相似度） |
+| **Top-K** | 30 |
+| **库** | `sentence-transformers` |
+
+### 6.4 方法 C：TF-IDF
+
+| 参数 | 值 |
+|---|---|
+| **向量化器** | `sklearn.feature_extraction.text.TfidfVectorizer` |
+| **max_features** | 5000 |
+| **stop_words** | `'english'` |
+| **ngram_range** | (1, 2)（unigram + bigram） |
+| **sublinear_tf** | `True`（对数词频缩放） |
+| **嵌入维度** | 5000（稀疏） |
+| **相似度** | `sklearn.metrics.pairwise.cosine_similarity` |
+| **Top-K** | 30 |
+
+### 6.5 融合参数搜索
+
+对每种方法测试 $\alpha \in \{0.0, 0.2, 0.4, 0.6, 0.8, 1.0\}$，
+以留出 MAE（2016–2023 逐年逐国）选最优 $\alpha$。
+
+### 6.6 结果（趋势修正后模型）
 
 | 方法 | 嵌入维度 | 最优 α | 留出 MAE | 改善 |
 |---|---:|---:|---:|---:|
-| TF-IDF | 5000 (稀疏) | 0.2 | 48.0 | 2.2% |
-| 千问 Qwen | 1536 | 0.4 | 48.3 | 1.7% |
-| Sentence Transformer | 384 | 0.4 | 48.6 | 1.0% |
-| 纯统计基线 | — | 1.0 | 49.1 | — |
+| TF-IDF | 5000 (稀疏) | 0.8 | 17.5 | 2.9% |
+| 千问 Qwen | 1536 | 0.6 | 17.6 | 2.3% |
+| Sentence Transformer | 384 | 0.8 | 18.0 | 0.3% |
+| 纯统计基线 | — | 1.0 | 18.1 | — |
 
-### 6.3 学术意义
+### 6.7 学术意义
 
 首次将 LLM 嵌入引入产品空间 ABM，证明语义信息捕捉了贸易统计无法反映的产品关系。
+反直觉发现：TF-IDF（简单方法）优于千问/ST（复杂方法），因为高维稀疏嵌入的精确关键词匹配对产品分类更有效。
 
 ## 7. 复现性
 
