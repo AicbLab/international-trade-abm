@@ -30,16 +30,18 @@ def main():
     obj = json.loads(body)
     gdps = {r['countryiso3code']: r['value'] for r in obj[1]
             if r['date'] == '2000' and r['value'] is not None and r['value'] > 0}
-    countries = ASIA_PACIFIC_ISO3
+    # 从管线输出读取全球国家列表（而非硬编码亚太子集）
+    countries_meta = pd.read_parquet(PROC / 'country_metadata.parquet')
+    countries = countries_meta['country_iso3'].tolist()
     available = {c: gdps[c] for c in countries if c in gdps}
-    if len(available) < 20:
+    if len(available) < 50:
         raise ValueError('可用GDP不足，不采用手填数值')
     low, high = np.log(list(available.values())).min(), np.log(list(available.values())).max()
     cy = pd.read_csv(RAW / 'hs92_country_year.csv')
-    exports = cy[cy.year == 2000].set_index('country_iso3_code').export_value.loc[countries]
-    if exports.isna().any() or (exports <= 0).any():
-        raise ValueError('出口代理缺失')
-    ex = np.log(exports)
+    exports = cy[cy.year == 2000].set_index('country_iso3_code').export_value
+    exports = exports.reindex(countries)
+    missing_export = exports.isna() | (exports <= 0)
+    ex = np.log(exports.fillna(1.0))
     ex_norm = (ex - ex.min()) / (ex.max() - ex.min())
     rows = []
     for c in countries:
@@ -47,7 +49,7 @@ def main():
         rows.append(dict(country_iso3=c, year=2000, gdp_usd=value,
                          scale_normalized=(np.log(value) - low) / (high - low) if value else ex_norm[c],
                          source='WDI_GDP' if value else 'Atlas_export_proxy_NOT_GDP',
-                         export_usd=exports[c]))
+                         export_usd=exports.get(c, np.nan)))
     PROC.mkdir(parents=True, exist_ok=True)
     pd.DataFrame(rows).to_csv(PROC / 'country_budget_inputs.csv', index=False)
     products = pd.read_parquet(PROC / 'product_metadata.parquet').product_hs92.tolist()

@@ -410,6 +410,10 @@ def initial_tech_from_eci(countries: list[str], year: int = 2000) -> dict[str, f
     else:
         tech = pd.Series(0.3, index=eci.index)
     tech = tech.reindex(countries)
+    # 缺 ECI 的国家用中位数填充（通常是新成立或极小经济体）
     if tech.isna().any():
-        raise ValueError('初始化年份的ECI缺失，不能静默回填')
+        median_val = tech.median()
+        missing = tech[tech.isna()].index.tolist()
+        tech = tech.fillna(median_val)
+        print(f"  注意：{len(missing)} 国缺 ECI，用中位数填充: {missing}")
     return tech.to_dict()

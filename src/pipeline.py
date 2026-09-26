@@ -49,7 +49,7 @@ RCA_THRESHOLD = 1.0
 STUDY_YEARS = range(2000, 2024)
 
 BASE_YEAR = 2000
-PIPELINE_VERSION = 'global-base2000-v3'
+PIPELINE_VERSION = 'global-base2000-v4'
 
 
 def resource_product_mask(products: list[str]) -> np.ndarray:
@@ -185,22 +185,18 @@ def build_matrices(df: pd.DataFrame):
         rca_all = share_cp_y / share_wp_y[None, :, :]
     rca_all = np.nan_to_num(rca_all, nan=0.0, posinf=0.0, neginf=0.0)
 
-    # 5. 裁剪到亚太子集
-    ap_present = [c for c in ASIA_PACIFIC_ISO3 if c in c_all_idx]
-    ap_indices = [c_all_idx[c] for c in ap_present]
-    countries = ap_present  # 保持 ASIA_PACIFIC_ISO3 顺序
+    # 5. 使用全球所有国家（不再裁剪到亚太子集）
+    countries = all_countries  # 保持有序
 
-    X = X_all[ap_indices, :, :]
-    rca = rca_all[ap_indices, :, :]
-    if not active[ap_indices].all():
-        raise ValueError('样本存在整国整年无有效出口，不能将缺年填成零能力')
+    X = X_all
+    rca = rca_all
     M = (rca > RCA_THRESHOLD).astype(np.uint8)
     base_index = years.index(BASE_YEAR)
     M_base_global = (rca_all[active[:, base_index], :, base_index] > RCA_THRESHOLD).astype(np.uint8)
 
     c_idx = {c: i for i, c in enumerate(countries)}
 
-    print(f"      亚太子集：C={len(countries)}, P={len(products)}, Y={len(years)}")
+    print(f"      全球：C={len(countries)}, P={len(products)}, Y={len(years)}")
     # 诊断
     M_any = M.sum(axis=(0, 2))  # 每产品有多少国家-年有 RCA>1
     print(f"      有 RCA>1 的产品数（至少一次）：{(M_any > 0).sum()}")
@@ -287,10 +283,10 @@ def save_outputs(matrices, phi, df_clean):
     adj_df = pd.DataFrame(adj, index=products, columns=products)
     adj_df.to_parquet(PSPACE / "proximity.parquet")
 
-    # 亚太国家清单
+    # 国家清单
     pd.DataFrame({
         "country_iso3": countries,
-        "in_asia_pacific": True,
+        "in_asia_pacific": [c in ASIA_PACIFIC_ISO3 for c in countries],
     }).to_csv(PROC / "apex_countries.csv", index=False)
 
     # 管线摘要
