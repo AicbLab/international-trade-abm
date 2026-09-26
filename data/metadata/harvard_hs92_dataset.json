@@ -1,0 +1,781 @@
+{
+  "status": "OK",
+  "data": {
+    "id": 3425423,
+    "identifier": "DVN/T4CHWJ",
+    "persistentUrl": "https://doi.org/10.7910/DVN/T4CHWJ",
+    "protocol": "doi",
+    "authority": "10.7910",
+    "separator": "/",
+    "publisher": "Harvard Dataverse",
+    "publicationDate": "2019-06-04",
+    "storageIdentifier": "s3://10.7910/DVN/T4CHWJ",
+    "guestbookId": 262,
+    "effectiveDatasetFileCountLimit": 1000,
+    "datasetFileUploadsAvailable": 629,
+    "datasetType": "dataset",
+    "locks": [],
+    "latestVersion": {
+      "id": 726419,
+      "datasetId": 3425423,
+      "datasetPersistentId": "doi:10.7910/DVN/T4CHWJ",
+      "datasetType": "dataset",
+      "storageIdentifier": "s3://10.7910/DVN/T4CHWJ",
+      "versionNumber": 18,
+      "internalVersionNumber": 5,
+      "versionMinorNumber": 0,
+      "versionState": "RELEASED",
+      "latestVersionPublishingState": "RELEASED",
+      "distributionDate": "2024-09-17",
+      "productionDate": "2024-09-10",
+      "lastUpdateTime": "2026-04-22T16:48:45Z",
+      "releaseTime": "2026-04-22T16:48:45Z",
+      "createTime": "2026-04-22T15:39:08Z",
+      "publicationDate": "2019-06-04",
+      "citationDate": "2019-06-04",
+      "guestbookId": 262,
+      "effectiveDatasetFileCountLimit": 1000,
+      "datasetFileUploadsAvailable": 629,
+      "license": {
+        "name": "CC0 1.0",
+        "uri": "http://creativecommons.org/publicdomain/zero/1.0",
+        "iconUri": "https://licensebuttons.net/p/zero/1.0/88x31.png",
+        "rightsIdentifier": "CC0-1.0",
+        "rightsIdentifierScheme": "SPDX",
+        "schemeUri": "https://spdx.org/licenses/",
+        "languageCode": "en"
+      },
+      "fileAccessRequest": false,
+      "metadataBlocks": {
+        "citation": {
+          "displayName": "Citation Metadata",
+          "name": "citation",
+          "fields": [
+            {
+              "typeName": "title",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "International Trade Data (HS, 92)"
+            },
+            {
+              "typeName": "author",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "authorName": {
+                    "typeName": "authorName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "The Growth Lab at Harvard University"
+                  },
+                  "authorAffiliation": {
+                    "typeName": "authorAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Harvard University"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "datasetContact",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "datasetContactName": {
+                    "typeName": "datasetContactName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Digital Development & Design Team"
+                  },
+                  "datasetContactAffiliation": {
+                    "typeName": "datasetContactAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Harvard University"
+                  },
+                  "datasetContactEmail": {
+                    "typeName": "datasetContactEmail",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "growthlabtools@hks.harvard.edu"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "dsDescription",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "dsDescriptionValue": {
+                    "typeName": "dsDescriptionValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "<p>\n<a href=\"http://atlas.hks.harvard.edu\">The Atlas of Economic Complexity</a> maintains trade data in multiple international classification systems. This data set contains trade flows classified via Harmonized System (HS) 1992. HS data offers a contemporary and detailed classification of goods, but covers a relatively short time period: \n</p>\n\n<ul>\n    <li>Categorizes approximately 5,000 goods</li>\n    <li>Coverages starts in 1995</li>\n    <li>Categories break down to 1-, 2-, 4-, or 6-digit detail levels (though country reporting can be less reliable at the 6-digit level)</li>\n</ul>\n\n<p>\nRaw data on trade in goods is provided by <a href=\"https://comtrade.un.org/\">United Nations Statistical Division (COMTRADE)</a>. The data is then cleaned by Growth Lab researchers using the Bustos-Yildirim Method which uses bilateral trade flows to account for inconsistent reporting and provides more reliable accounting.\n</p>\n\n<p>\nA data dictionary for this repository describing columns within these files can be found under \"hs92_data_dictionary.csv\".\n</p>"
+                  },
+                  "dsDescriptionDate": {
+                    "typeName": "dsDescriptionDate",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "2025-03-31"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "subject",
+              "multiple": true,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Social Sciences"
+              ]
+            },
+            {
+              "typeName": "topicClassification",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "topicClassValue": {
+                    "typeName": "topicClassValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Technological innovations--Economic aspects"
+                  },
+                  "topicClassVocab": {
+                    "typeName": "topicClassVocab",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "LCSH"
+                  },
+                  "topicClassVocabURI": {
+                    "typeName": "topicClassVocabURI",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "http://id.loc.gov/authorities/subjects/sh2010115847.html"
+                  }
+                },
+                {
+                  "topicClassValue": {
+                    "typeName": "topicClassValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Economic development"
+                  },
+                  "topicClassVocab": {
+                    "typeName": "topicClassVocab",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "LCSH"
+                  },
+                  "topicClassVocabURI": {
+                    "typeName": "topicClassVocabURI",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "http://id.loc.gov/authorities/subjects/sh85040804.html"
+                  }
+                },
+                {
+                  "topicClassValue": {
+                    "typeName": "topicClassValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "International trade"
+                  },
+                  "topicClassVocab": {
+                    "typeName": "topicClassVocab",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "LCSH"
+                  },
+                  "topicClassVocabURI": {
+                    "typeName": "topicClassVocabURI",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "http://id.loc.gov/authorities/subjects/sh87004890.html"
+                  }
+                },
+                {
+                  "topicClassValue": {
+                    "typeName": "topicClassValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Exports"
+                  },
+                  "topicClassVocab": {
+                    "typeName": "topicClassVocab",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "LCSH"
+                  },
+                  "topicClassVocabURI": {
+                    "typeName": "topicClassVocabURI",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "http://id.loc.gov/authorities/subjects/sh87004892.html"
+                  }
+                },
+                {
+                  "topicClassValue": {
+                    "typeName": "topicClassValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Imports"
+                  },
+                  "topicClassVocab": {
+                    "typeName": "topicClassVocab",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "LCSH"
+                  },
+                  "topicClassVocabURI": {
+                    "typeName": "topicClassVocabURI",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "http://id.loc.gov/authorities/subjects/sh87004893.html"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "publication",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "publicationRelationType": {
+                    "typeName": "publicationRelationType",
+                    "multiple": false,
+                    "typeClass": "controlledVocabulary",
+                    "value": "IsSupplementTo"
+                  },
+                  "publicationCitation": {
+                    "typeName": "publicationCitation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Growth Lab at Harvard University. \"The Atlas of Economic Complexity.\" Web application. Harvard Kennedy School, 2024. https://atlas.hks.harvard.edu"
+                  },
+                  "publicationIDType": {
+                    "typeName": "publicationIDType",
+                    "multiple": false,
+                    "typeClass": "controlledVocabulary",
+                    "value": "url"
+                  },
+                  "publicationURL": {
+                    "typeName": "publicationURL",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "http://www.atlas.hks.harvard.edu/"
+                  }
+                },
+                {
+                  "publicationRelationType": {
+                    "typeName": "publicationRelationType",
+                    "multiple": false,
+                    "typeClass": "controlledVocabulary",
+                    "value": "IsSupplementTo"
+                  },
+                  "publicationCitation": {
+                    "typeName": "publicationCitation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "R Hausmann, CA Hidalgo, S Bustos, M Coscia, S Chung, J Jimenez, A Simoes, M Yildirim. The Atlas of Economic Complexity. MIT Press. Cambridge MA. (2013)"
+                  },
+                  "publicationIDType": {
+                    "typeName": "publicationIDType",
+                    "multiple": false,
+                    "typeClass": "controlledVocabulary",
+                    "value": "isbn"
+                  },
+                  "publicationIDNumber": {
+                    "typeName": "publicationIDNumber",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "978-026252542-8"
+                  },
+                  "publicationURL": {
+                    "typeName": "publicationURL",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "https://growthlab.hks.harvard.edu/publications/atlas-economic-complexity-mapping-paths-prosperity"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "productionDate",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "2024-09-10"
+            },
+            {
+              "typeName": "distributionDate",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "2024-09-17"
+            },
+            {
+              "typeName": "depositor",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "Jackson, Ellie"
+            },
+            {
+              "typeName": "dateOfDeposit",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "2025-03-31"
+            },
+            {
+              "typeName": "timePeriodCovered",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "timePeriodCoveredStart": {
+                    "typeName": "timePeriodCoveredStart",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "1995-01-01"
+                  },
+                  "timePeriodCoveredEnd": {
+                    "typeName": "timePeriodCoveredEnd",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "2023-12-31"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "files": [
+        {
+          "description": "",
+          "label": "hs92_country_country_product_year_6_1995_1999.csv",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 726419,
+          "dataFile": {
+            "id": 13685106,
+            "persistentId": "",
+            "filename": "hs92_country_country_product_year_6_1995_1999.csv",
+            "contentType": "text/comma-separated-values",
+            "friendlyType": "Comma Separated Values",
+            "filesize": 1940426282,
+            "description": "",
+            "storageIdentifier": "s3l://dvn-cloud-iqss:19db5f39194-84b5562208da",
+            "rootDataFileId": -1,
+            "md5": "20af51028928e4797a10a408019d81a4",
+            "checksum": {
+              "type": "MD5",
+              "value": "20af51028928e4797a10a408019d81a4"
+            },
+            "tabularData": false,
+            "creationDate": "2026-04-22",
+            "publicationDate": "2026-04-22",
+            "lastUpdateTime": "2026-04-22T16:48:45Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "description": "",
+          "label": "hs92_country_country_product_year_6_2000_2009.csv",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 726419,
+          "dataFile": {
+            "id": 13685108,
+            "persistentId": "",
+            "filename": "hs92_country_country_product_year_6_2000_2009.csv",
+            "contentType": "text/comma-separated-values",
+            "friendlyType": "Comma Separated Values",
+            "filesize": 4637596778,
+            "description": "",
+            "storageIdentifier": "s3l://dvn-cloud-iqss:19db5f28ab1-e57b13933b2a",
+            "rootDataFileId": -1,
+            "md5": "8dfb0c1877dd1de2923ed1644507379d",
+            "checksum": {
+              "type": "MD5",
+              "value": "8dfb0c1877dd1de2923ed1644507379d"
+            },
+            "tabularData": false,
+            "creationDate": "2026-04-22",
+            "publicationDate": "2026-04-22",
+            "lastUpdateTime": "2026-04-22T16:48:45Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "description": "",
+          "label": "hs92_country_country_product_year_6_2010_2019.csv",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 726419,
+          "dataFile": {
+            "id": 13685120,
+            "persistentId": "",
+            "filename": "hs92_country_country_product_year_6_2010_2019.csv",
+            "contentType": "text/comma-separated-values",
+            "friendlyType": "Comma Separated Values",
+            "filesize": 5595000168,
+            "description": "",
+            "storageIdentifier": "s3l://dvn-cloud-iqss:19db5f7b48b-f4723eef4b7f",
+            "rootDataFileId": -1,
+            "md5": "6addcac41be6dd5ad62682a443347b13",
+            "checksum": {
+              "type": "MD5",
+              "value": "6addcac41be6dd5ad62682a443347b13"
+            },
+            "tabularData": false,
+            "creationDate": "2026-04-22",
+            "publicationDate": "2026-04-22",
+            "lastUpdateTime": "2026-04-22T16:48:45Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "description": "",
+          "label": "hs92_country_country_product_year_6_2020_2024.csv",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 726419,
+          "dataFile": {
+            "id": 13685118,
+            "persistentId": "",
+            "filename": "hs92_country_country_product_year_6_2020_2024.csv",
+            "contentType": "text/comma-separated-values",
+            "friendlyType": "Comma Separated Values",
+            "filesize": 2855413820,
+            "description": "",
+            "storageIdentifier": "s3l://dvn-cloud-iqss:19db5f49a60-2ab50da1f265",
+            "rootDataFileId": -1,
+            "md5": "5ebf020c25720532232354d81e34a7fe",
+            "checksum": {
+              "type": "MD5",
+              "value": "5ebf020c25720532232354d81e34a7fe"
+            },
+            "tabularData": false,
+            "creationDate": "2026-04-22",
+            "publicationDate": "2026-04-22",
+            "lastUpdateTime": "2026-04-22T16:48:45Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "description": "",
+          "label": "hs92_country_country_year.csv",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 726419,
+          "dataFile": {
+            "id": 13685107,
+            "persistentId": "",
+            "filename": "hs92_country_country_year.csv",
+            "contentType": "text/comma-separated-values",
+            "friendlyType": "Comma Separated Values",
+            "filesize": 30767251,
+            "description": "",
+            "storageIdentifier": "s3l://dvn-cloud-iqss:19db5f38048-07dc3b2daec3",
+            "rootDataFileId": -1,
+            "md5": "9c39659168dd5212f745572ba35b2a5c",
+            "checksum": {
+              "type": "MD5",
+              "value": "9c39659168dd5212f745572ba35b2a5c"
+            },
+            "tabularData": false,
+            "creationDate": "2026-04-22",
+            "publicationDate": "2026-04-22",
+            "lastUpdateTime": "2026-04-22T16:48:45Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "description": "",
+          "label": "hs92_country_product_year_1.csv",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 726419,
+          "dataFile": {
+            "id": 13685114,
+            "persistentId": "",
+            "filename": "hs92_country_product_year_1.csv",
+            "contentType": "text/comma-separated-values",
+            "friendlyType": "Comma Separated Values",
+            "filesize": 4140616,
+            "description": "",
+            "storageIdentifier": "s3l://dvn-cloud-iqss:19db5f28789-5b9996f7231a",
+            "rootDataFileId": -1,
+            "md5": "f9ef14b3e085da347dd081bab37405d2",
+            "checksum": {
+              "type": "MD5",
+              "value": "f9ef14b3e085da347dd081bab37405d2"
+            },
+            "tabularData": false,
+            "creationDate": "2026-04-22",
+            "publicationDate": "2026-04-22",
+            "lastUpdateTime": "2026-04-22T16:48:45Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "description": "",
+          "label": "hs92_country_product_year_2.csv",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 726419,
+          "dataFile": {
+            "id": 13685112,
+            "persistentId": "",
+            "filename": "hs92_country_product_year_2.csv",
+            "contentType": "text/comma-separated-values",
+            "friendlyType": "Comma Separated Values",
+            "filesize": 38135675,
+            "description": "",
+            "storageIdentifier": "s3l://dvn-cloud-iqss:19db5f8b5a5-945bbd577f40",
+            "rootDataFileId": -1,
+            "md5": "b767f3c2dad599ecce2204a4b5ba9fa6",
+            "checksum": {
+              "type": "MD5",
+              "value": "b767f3c2dad599ecce2204a4b5ba9fa6"
+            },
+            "tabularData": false,
+            "creationDate": "2026-04-22",
+            "publicationDate": "2026-04-22",
+            "lastUpdateTime": "2026-04-22T16:48:45Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "description": "",
+          "label": "hs92_country_product_year_4.csv",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 726419,
+          "dataFile": {
+            "id": 13685110,
+            "persistentId": "",
+            "filename": "hs92_country_product_year_4.csv",
+            "contentType": "text/comma-separated-values",
+            "friendlyType": "Comma Separated Values",
+            "filesize": 451749132,
+            "description": "",
+            "storageIdentifier": "s3l://dvn-cloud-iqss:19db5f725b0-db2da538753c",
+            "rootDataFileId": -1,
+            "md5": "5d87b2ac45517bf4e0e50600140672e5",
+            "checksum": {
+              "type": "MD5",
+              "value": "5d87b2ac45517bf4e0e50600140672e5"
+            },
+            "tabularData": false,
+            "creationDate": "2026-04-22",
+            "publicationDate": "2026-04-22",
+            "lastUpdateTime": "2026-04-22T16:48:45Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "description": "",
+          "label": "hs92_country_product_year_6.csv",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 726419,
+          "dataFile": {
+            "id": 13685115,
+            "persistentId": "",
+            "filename": "hs92_country_product_year_6.csv",
+            "contentType": "text/comma-separated-values",
+            "friendlyType": "Comma Separated Values",
+            "filesize": 1014979406,
+            "description": "",
+            "storageIdentifier": "s3l://dvn-cloud-iqss:19db5f5fbe9-073889be5ec4",
+            "rootDataFileId": -1,
+            "md5": "1a4d55307e5b30bbdcfade17a24f680c",
+            "checksum": {
+              "type": "MD5",
+              "value": "1a4d55307e5b30bbdcfade17a24f680c"
+            },
+            "tabularData": false,
+            "creationDate": "2026-04-22",
+            "publicationDate": "2026-04-22",
+            "lastUpdateTime": "2026-04-22T16:48:45Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "description": "",
+          "label": "hs92_country_year.csv",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 726419,
+          "dataFile": {
+            "id": 13685109,
+            "persistentId": "",
+            "filename": "hs92_country_year.csv",
+            "contentType": "text/comma-separated-values",
+            "friendlyType": "Comma Separated Values",
+            "filesize": 363501,
+            "description": "",
+            "storageIdentifier": "s3l://dvn-cloud-iqss:19db5f390a8-8b3108e30992",
+            "rootDataFileId": -1,
+            "md5": "9467cc0686c2380659f892948509115d",
+            "checksum": {
+              "type": "MD5",
+              "value": "9467cc0686c2380659f892948509115d"
+            },
+            "tabularData": false,
+            "creationDate": "2026-04-22",
+            "publicationDate": "2026-04-22",
+            "lastUpdateTime": "2026-04-22T16:48:45Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "description": "",
+          "label": "hs92_data_dictionary.csv",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 726419,
+          "dataFile": {
+            "id": 13685113,
+            "persistentId": "",
+            "filename": "hs92_data_dictionary.csv",
+            "contentType": "text/comma-separated-values",
+            "friendlyType": "Comma Separated Values",
+            "filesize": 3257,
+            "description": "",
+            "storageIdentifier": "s3l://dvn-cloud-iqss:19db5f38ffc-4d878b86761f",
+            "rootDataFileId": -1,
+            "md5": "8416d43f7cc94b583750554d8d3515d6",
+            "checksum": {
+              "type": "MD5",
+              "value": "8416d43f7cc94b583750554d8d3515d6"
+            },
+            "tabularData": false,
+            "creationDate": "2026-04-22",
+            "publicationDate": "2026-04-22",
+            "lastUpdateTime": "2026-04-22T16:48:45Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "description": "",
+          "label": "hs92_product_year_1.csv",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 726419,
+          "dataFile": {
+            "id": 13685117,
+            "persistentId": "",
+            "filename": "hs92_product_year_1.csv",
+            "contentType": "text/comma-separated-values",
+            "friendlyType": "Comma Separated Values",
+            "filesize": 12801,
+            "description": "",
+            "storageIdentifier": "s3l://dvn-cloud-iqss:19db5f28a0a-cbcca12d8847",
+            "rootDataFileId": -1,
+            "md5": "b51d9057df4c5eacbb6d4e58ae1bc573",
+            "checksum": {
+              "type": "MD5",
+              "value": "b51d9057df4c5eacbb6d4e58ae1bc573"
+            },
+            "tabularData": false,
+            "creationDate": "2026-04-22",
+            "publicationDate": "2026-04-22",
+            "lastUpdateTime": "2026-04-22T16:48:45Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "description": "",
+          "label": "hs92_product_year_2.csv",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 726419,
+          "dataFile": {
+            "id": 13685111,
+            "persistentId": "",
+            "filename": "hs92_product_year_2.csv",
+            "contentType": "text/comma-separated-values",
+            "friendlyType": "Comma Separated Values",
+            "filesize": 123986,
+            "description": "",
+            "storageIdentifier": "s3l://dvn-cloud-iqss:19db5f7230d-197c987fbb4f",
+            "rootDataFileId": -1,
+            "md5": "952d9b775a8eb851c3739b1b4ba4eaaf",
+            "checksum": {
+              "type": "MD5",
+              "value": "952d9b775a8eb851c3739b1b4ba4eaaf"
+            },
+            "tabularData": false,
+            "creationDate": "2026-04-22",
+            "publicationDate": "2026-04-22",
+            "lastUpdateTime": "2026-04-22T16:48:45Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "description": "",
+          "label": "hs92_product_year_4.csv",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 726419,
+          "dataFile": {
+            "id": 13685116,
+            "persistentId": "",
+            "filename": "hs92_product_year_4.csv",
+            "contentType": "text/comma-separated-values",
+            "friendlyType": "Comma Separated Values",
+            "filesize": 1589755,
+            "description": "",
+            "storageIdentifier": "s3l://dvn-cloud-iqss:19db5f72453-ecbd196c4d2b",
+            "rootDataFileId": -1,
+            "md5": "fd8eb7cb402ca23b65ad8eb30f6d7e00",
+            "checksum": {
+              "type": "MD5",
+              "value": "fd8eb7cb402ca23b65ad8eb30f6d7e00"
+            },
+            "tabularData": false,
+            "creationDate": "2026-04-22",
+            "publicationDate": "2026-04-22",
+            "lastUpdateTime": "2026-04-22T16:48:45Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "description": "",
+          "label": "hs92_product_year_6.csv",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 726419,
+          "dataFile": {
+            "id": 13685119,
+            "persistentId": "",
+            "filename": "hs92_product_year_6.csv",
+            "contentType": "text/comma-separated-values",
+            "friendlyType": "Comma Separated Values",
+            "filesize": 5617888,
+            "description": "",
+            "storageIdentifier": "s3l://dvn-cloud-iqss:19db5f8caf3-43af77b651ea",
+            "rootDataFileId": -1,
+            "md5": "432abeddc2aebd06b57d4fab4f172410",
+            "checksum": {
+              "type": "MD5",
+              "value": "432abeddc2aebd06b57d4fab4f172410"
+            },
+            "tabularData": false,
+            "creationDate": "2026-04-22",
+            "publicationDate": "2026-04-22",
+            "lastUpdateTime": "2026-04-22T16:48:45Z",
+            "fileAccessRequest": false
+          }
+        }
+      ]
+    }
+  }
+}

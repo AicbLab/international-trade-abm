@@ -1,0 +1,45 @@
+{
+  "pipeline_version": "global-base2000-v3",
+  "theta": {
+    "learning_rate": 0.45909206739818736,
+    "imitation_rate": 0.24925427269488284,
+    "depreciation_rate": 0.014752890563692254
+  },
+  "seed": 42,
+  "policy_start_step": 6,
+  "experiments_run": [
+    "A",
+    "B",
+    "C"
+  ],
+  "subsidy": {
+    "targets": [
+      "8542"
+    ],
+    "strength": 3.0,
+    "country": "CHN"
+  },
+  "blockade": {
+    "targets": [
+      "8542",
+      "8471"
+    ],
+    "strength": 0.3,
+    "country": "CHN"
+  },
+  "tariff": {
+    "targets": [
+      "6109",
+      "6204",
+      "6110",
+      "6104"
+    ],
+    "rate": 0.25,
+    "elasticity": 1.0,
+    "countries": [
+      "VNM",
+      "IDN",
+      "BGD"
+    ]
+  }
+}

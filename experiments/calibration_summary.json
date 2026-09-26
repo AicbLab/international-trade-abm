@@ -1,0 +1,37 @@
+{
+  "pipeline_version": "global-base2000-v3",
+  "particles": 50,
+  "generations": 5,
+  "repeats": 2,
+  "seed": 42,
+  "complete": true,
+  "theta_star": {
+    "learning_rate": 0.45909206739818736,
+    "imitation_rate": 0.24925427269488284,
+    "depreciation_rate": 0.014752890563692254
+  },
+  "theta_default": {
+    "learning_rate": 0.05,
+    "imitation_rate": 0.1,
+    "depreciation_rate": 0.005
+  },
+  "metrics_calibrated": {
+    "holdout_mae": 53.65625,
+    "holdout_rmse": 65.21886230225118,
+    "final_mae": 63.125,
+    "final_rmse": 76.81064379368266,
+    "final_regional_eci_mae": 0.3811023441477788,
+    "final_mean_diversity": 169.08333333333334,
+    "n_overestimated": 9
+  },
+  "metrics_default": {
+    "holdout_mae": 49.104166666666664,
+    "holdout_rmse": 59.764206818685935,
+    "final_mae": 57.958333333333336,
+    "final_rmse": 69.59675519256147,
+    "final_regional_eci_mae": 0.34950560204204706,
+    "final_mean_diversity": 182.91666666666666,
+    "n_overestimated": 8
+  },
+  "n_generations_run": 5
+}

@@ -1,0 +1,630 @@
+[
+  {
+    "path": "data/raw/harvard_atlas/hs92_data_dictionary.csv",
+    "bytes": 3257,
+    "rows": 18,
+    "year_min": null,
+    "year_max": null,
+    "countries": 0,
+    "products": 0,
+    "numeric_hs4_products": 0,
+    "missing_numeric": {},
+    "negative_nonnegative_fields": {},
+    "anomaly_examples": {}
+  },
+  {
+    "path": "data/raw/harvard_atlas/hs92_country_year.csv",
+    "bytes": 363501,
+    "rows": 6755,
+    "rows_2000_2023": 5468,
+    "year_min": 1995,
+    "year_max": 2024,
+    "countries": 232,
+    "products": 0,
+    "numeric_hs4_products": 0,
+    "countries_with_all_requested_years": 223,
+    "country_missing_years": {
+      "ANS": [
+        2000,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2017,
+        2018,
+        2019
+      ],
+      "ANT": [
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "BES": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "BLM": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012
+      ],
+      "CUW": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "MNE": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "SRB": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2005
+      ],
+      "SSD": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011
+      ],
+      "SXM": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ]
+    },
+    "missing_numeric": {
+      "eci": 6
+    },
+    "negative_nonnegative_fields": {
+      "import_value": 1
+    },
+    "anomaly_examples": {
+      "negative_import_value": [
+        {
+          "country_id": "999",
+          "country_iso3_code": "ANS",
+          "year": "2020",
+          "export_value": "0",
+          "import_value": "-325450001",
+          "eci": "",
+          "coi": "",
+          "diversity": "",
+          "growth_proj": ""
+        }
+      ]
+    }
+  },
+  {
+    "path": "data/raw/harvard_atlas/hs92_product_year_4.csv",
+    "bytes": 1589755,
+    "rows": 37287,
+    "rows_2000_2023": 29830,
+    "year_min": 1995,
+    "year_max": 2024,
+    "countries": 0,
+    "products": 1243,
+    "numeric_hs4_products": 1242,
+    "missing_numeric": {},
+    "negative_nonnegative_fields": {},
+    "non_hs4_code": 30,
+    "non_hs4_code_2000_2023": 24,
+    "anomaly_examples": {
+      "non_hs4_code": [
+        {
+          "product_id": "1892",
+          "product_hs92_code": "XXXX",
+          "year": "1995",
+          "export_value": "69508969754",
+          "import_value": "69508969754",
+          "pci": "-1.976"
+        },
+        {
+          "product_id": "1892",
+          "product_hs92_code": "XXXX",
+          "year": "1996",
+          "export_value": "78514310530",
+          "import_value": "78514310530",
+          "pci": "-1.715"
+        },
+        {
+          "product_id": "1892",
+          "product_hs92_code": "XXXX",
+          "year": "1997",
+          "export_value": "75313013988",
+          "import_value": "75313013988",
+          "pci": "-1.475"
+        },
+        {
+          "product_id": "1892",
+          "product_hs92_code": "XXXX",
+          "year": "1998",
+          "export_value": "78776146646",
+          "import_value": "78776146646",
+          "pci": "-1.663"
+        },
+        {
+          "product_id": "1892",
+          "product_hs92_code": "XXXX",
+          "year": "1999",
+          "export_value": "90366413059",
+          "import_value": "90366413059",
+          "pci": "-1.874"
+        }
+      ]
+    }
+  },
+  {
+    "path": "data/raw/harvard_atlas/hs92_country_country_year.csv",
+    "bytes": 30767251,
+    "rows": 879014,
+    "rows_2000_2023": 733772,
+    "year_min": 1995,
+    "year_max": 2024,
+    "countries": 232,
+    "products": 0,
+    "numeric_hs4_products": 0,
+    "countries_with_all_requested_years": 223,
+    "country_missing_years": {
+      "ANS": [
+        2000,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2017,
+        2018,
+        2019
+      ],
+      "ANT": [
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "BES": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "BLM": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012
+      ],
+      "CUW": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "MNE": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "SRB": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2005
+      ],
+      "SSD": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011
+      ],
+      "SXM": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ]
+    },
+    "missing_numeric": {},
+    "negative_nonnegative_fields": {
+      "export_value": 1,
+      "import_value": 1
+    },
+    "anomaly_examples": {
+      "negative_export_value": [
+        {
+          "country_id": "862",
+          "country_iso3_code": "VEN",
+          "partner_country_id": "999",
+          "partner_iso3_code": "ANS",
+          "year": "2020",
+          "export_value": "-325450001",
+          "import_value": "0"
+        }
+      ],
+      "negative_import_value": [
+        {
+          "country_id": "999",
+          "country_iso3_code": "ANS",
+          "partner_country_id": "862",
+          "partner_iso3_code": "VEN",
+          "year": "2020",
+          "export_value": "0",
+          "import_value": "-325450001"
+        }
+      ]
+    }
+  },
+  {
+    "path": "data/raw/harvard_atlas/hs92_country_product_year_4.csv",
+    "bytes": 451749132,
+    "rows": 6752528,
+    "rows_2000_2023": 5490943,
+    "year_min": 1995,
+    "year_max": 2024,
+    "countries": 232,
+    "products": 1243,
+    "numeric_hs4_products": 1242,
+    "countries_with_all_requested_years": 223,
+    "country_missing_years": {
+      "ANS": [
+        2000,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2017,
+        2018,
+        2019
+      ],
+      "ANT": [
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "BES": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "BLM": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012
+      ],
+      "CUW": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ],
+      "MNE": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "SRB": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2005
+      ],
+      "SSD": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011
+      ],
+      "SXM": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010
+      ]
+    },
+    "missing_numeric": {
+      "export_rca": 17
+    },
+    "negative_nonnegative_fields": {
+      "import_value": 1
+    },
+    "non_hs4_code": 3114,
+    "non_hs4_code_2000_2023": 2629,
+    "anomaly_examples": {
+      "non_hs4_code": [
+        {
+          "country_id": "4",
+          "country_iso3_code": "AFG",
+          "product_id": "1892",
+          "product_hs92_code": "XXXX",
+          "year": "2008",
+          "export_value": "0",
+          "import_value": "140209183",
+          "global_market_share": "0.0",
+          "export_rca": "0.0",
+          "distance": "0.887",
+          "cog": "0.0",
+          "pci": "-2.832"
+        },
+        {
+          "country_id": "4",
+          "country_iso3_code": "AFG",
+          "product_id": "1892",
+          "product_hs92_code": "XXXX",
+          "year": "2009",
+          "export_value": "0",
+          "import_value": "210626614",
+          "global_market_share": "0.0",
+          "export_rca": "0.0",
+          "distance": "0.852",
+          "cog": "0.0",
+          "pci": "-2.697"
+        },
+        {
+          "country_id": "4",
+          "country_iso3_code": "AFG",
+          "product_id": "1892",
+          "product_hs92_code": "XXXX",
+          "year": "2010",
+          "export_value": "26372859",
+          "import_value": "217585304",
+          "global_market_share": "9.5e-05",
+          "export_rca": "2.42026",
+          "distance": "0.873",
+          "cog": "0.0",
+          "pci": "-2.477"
+        },
+        {
+          "country_id": "4",
+          "country_iso3_code": "AFG",
+          "product_id": "1892",
+          "product_hs92_code": "XXXX",
+          "year": "2011",
+          "export_value": "0",
+          "import_value": "262462954",
+          "global_market_share": "0.0",
+          "export_rca": "0.0",
+          "distance": "0.913",
+          "cog": "0.0",
+          "pci": "-2.555"
+        },
+        {
+          "country_id": "4",
+          "country_iso3_code": "AFG",
+          "product_id": "1892",
+          "product_hs92_code": "XXXX",
+          "year": "2012",
+          "export_value": "46177089",
+          "import_value": "99717269",
+          "global_market_share": "0.000147",
+          "export_rca": "3.941793",
+          "distance": "0.907",
+          "cog": "0.0",
+          "pci": "-2.573"
+        }
+      ],
+      "negative_import_value": [
+        {
+          "country_id": "999",
+          "country_iso3_code": "ANS",
+          "product_id": "910",
+          "product_hs92_code": "2709",
+          "year": "2020",
+          "export_value": "0",
+          "import_value": "-325450001",
+          "global_market_share": "0.0",
+          "export_rca": "",
+          "distance": "",
+          "cog": "",
+          "pci": "-2.939"
+        }
+      ]
+    }
+  },
+  {
+    "path": "data/raw/figshare_integrated/universal_database.zip",
+    "bytes": 45145124
+  },
+  {
+    "path": "data/raw/un_comtrade_reference/Reporters.json",
+    "bytes": 80831
+  },
+  {
+    "path": "data/raw/un_comtrade_reference/H0.json",
+    "bytes": 1351970
+  }
+]

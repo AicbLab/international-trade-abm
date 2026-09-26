@@ -1,0 +1,97 @@
+{
+  "files": [
+    {
+      "id": 36062336,
+      "name": "universal_database.zip",
+      "size": 45145124,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/36062336",
+      "supplied_md5": "d25e9b72e3b6cd0b58ffec037e1e4799",
+      "computed_md5": "d25e9b72e3b6cd0b58ffec037e1e4799",
+      "mimetype": "application/zip"
+    }
+  ],
+  "folder_structure": {},
+  "authors": [
+    {
+      "id": 12967358,
+      "full_name": "Patelli",
+      "first_name": "",
+      "last_name": "Patelli",
+      "is_active": true,
+      "url_name": "Patelli",
+      "orcid_id": "0000-0002-1864-9612"
+    }
+  ],
+  "custom_fields": [],
+  "figshare_url": "https://figshare.com/articles/dataset/Integrated_Database_for_Economic_Complexity/20167700",
+  "download_disabled": false,
+  "description": "<p>The database collect and aggregate the database of Goods and Services at 2 digits. While the data of Goods is already reconciled and regularized, the data of Service has been reconstructed in the present data.</p>",
+  "funding": null,
+  "funding_list": [],
+  "version": 1,
+  "status": "public",
+  "size": 45145124,
+  "created_date": "2022-07-21T08:34:22Z",
+  "modified_date": "2022-07-21T08:34:22Z",
+  "is_public": true,
+  "is_confidential": false,
+  "is_metadata_record": false,
+  "confidential_reason": "",
+  "metadata_reason": "",
+  "license": {
+    "value": 1,
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "tags": [
+    "Integrated Databases",
+    "economic complexity",
+    "Econometric and Statistical Methods"
+  ],
+  "keywords": [
+    "Integrated Databases",
+    "economic complexity",
+    "Econometric and Statistical Methods"
+  ],
+  "categories": [
+    {
+      "id": 26017,
+      "title": "Econometric and statistical methods",
+      "parent_id": 26011,
+      "path": "/25945/26011/26017",
+      "source_id": "380202",
+      "taxonomy_id": 100
+    }
+  ],
+  "references": [],
+  "has_linked_file": false,
+  "citation": "Patelli (2022). Integrated Database for Economic Complexity. figshare. Dataset. https://doi.org/10.6084/m9.figshare.20167700.v1",
+  "related_materials": [],
+  "is_embargoed": false,
+  "embargo_date": null,
+  "embargo_type": "file",
+  "embargo_title": "",
+  "embargo_reason": "",
+  "embargo_options": [],
+  "id": 20167700,
+  "title": "Integrated Database for Economic Complexity",
+  "doi": "10.6084/m9.figshare.20167700.v1",
+  "handle": "",
+  "url": "https://api.figshare.com/v2/articles/20167700",
+  "published_date": "2022-07-21T08:34:22Z",
+  "thumb": "",
+  "defined_type": 3,
+  "defined_type_name": "dataset",
+  "group_id": null,
+  "url_private_api": "https://api.figshare.com/v2/account/articles/20167700",
+  "url_public_api": "https://api.figshare.com/v2/articles/20167700",
+  "url_private_html": "https://figshare.com/account/articles/20167700",
+  "url_public_html": "https://figshare.com/articles/dataset/Integrated_Database_for_Economic_Complexity/20167700",
+  "timeline": {
+    "posted": "2022-07-21T08:34:22",
+    "firstOnline": "2022-07-21"
+  },
+  "resource_title": null,
+  "resource_doi": null
+}

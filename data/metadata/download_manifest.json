@@ -1,0 +1,175 @@
+{
+  "requested_period": [
+    2000,
+    2023
+  ],
+  "primary_classification": "HS 1992, 4-digit",
+  "created_at": "2026-09-26T03:30:06.116773+00:00",
+  "files": [
+    {
+      "source": "Harvard Growth Lab / Harvard Dataverse",
+      "dataset_doi": "doi:10.7910/DVN/T4CHWJ",
+      "dataset_version": "18.0",
+      "license": {
+        "name": "CC0 1.0",
+        "uri": "http://creativecommons.org/publicdomain/zero/1.0",
+        "iconUri": "https://licensebuttons.net/p/zero/1.0/88x31.png",
+        "rightsIdentifier": "CC0-1.0",
+        "rightsIdentifierScheme": "SPDX",
+        "schemeUri": "https://spdx.org/licenses/",
+        "languageCode": "en"
+      },
+      "path": "data/raw/harvard_atlas/hs92_data_dictionary.csv",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/13685113",
+      "expected_bytes": 3257,
+      "expected_md5": "8416d43f7cc94b583750554d8d3515d6",
+      "bytes": 3257,
+      "md5": "8416d43f7cc94b583750554d8d3515d6",
+      "sha256": "c8cbf90b676b3f9417d265751dde6f8e8c7f698f56ca521f038e5ebd91a331a1",
+      "content_type": "text/comma-separated-values",
+      "status": "verified",
+      "downloaded_at": "2026-09-26T03:30:10.985384+00:00"
+    },
+    {
+      "source": "Harvard Growth Lab / Harvard Dataverse",
+      "dataset_doi": "doi:10.7910/DVN/T4CHWJ",
+      "dataset_version": "18.0",
+      "license": {
+        "name": "CC0 1.0",
+        "uri": "http://creativecommons.org/publicdomain/zero/1.0",
+        "iconUri": "https://licensebuttons.net/p/zero/1.0/88x31.png",
+        "rightsIdentifier": "CC0-1.0",
+        "rightsIdentifierScheme": "SPDX",
+        "schemeUri": "https://spdx.org/licenses/",
+        "languageCode": "en"
+      },
+      "path": "data/raw/harvard_atlas/hs92_country_year.csv",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/13685109",
+      "expected_bytes": 363501,
+      "expected_md5": "9467cc0686c2380659f892948509115d",
+      "bytes": 363501,
+      "md5": "9467cc0686c2380659f892948509115d",
+      "sha256": "af929b790e95b1ef1815229640ecc5d66f8ca48da0e226782571ded42994d468",
+      "content_type": "text/comma-separated-values",
+      "status": "verified",
+      "downloaded_at": "2026-09-26T03:30:16.368132+00:00"
+    },
+    {
+      "source": "Harvard Growth Lab / Harvard Dataverse",
+      "dataset_doi": "doi:10.7910/DVN/T4CHWJ",
+      "dataset_version": "18.0",
+      "license": {
+        "name": "CC0 1.0",
+        "uri": "http://creativecommons.org/publicdomain/zero/1.0",
+        "iconUri": "https://licensebuttons.net/p/zero/1.0/88x31.png",
+        "rightsIdentifier": "CC0-1.0",
+        "rightsIdentifierScheme": "SPDX",
+        "schemeUri": "https://spdx.org/licenses/",
+        "languageCode": "en"
+      },
+      "path": "data/raw/harvard_atlas/hs92_product_year_4.csv",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/13685116",
+      "expected_bytes": 1589755,
+      "expected_md5": "fd8eb7cb402ca23b65ad8eb30f6d7e00",
+      "bytes": 1589755,
+      "md5": "fd8eb7cb402ca23b65ad8eb30f6d7e00",
+      "sha256": "f57886cce6044dfa0973071f58cc948ae799bcac4ca5991ff2e32b9843b98030",
+      "content_type": "text/comma-separated-values",
+      "status": "verified",
+      "downloaded_at": "2026-09-26T03:30:27.368238+00:00"
+    },
+    {
+      "source": "Harvard Growth Lab / Harvard Dataverse",
+      "dataset_doi": "doi:10.7910/DVN/T4CHWJ",
+      "dataset_version": "18.0",
+      "license": {
+        "name": "CC0 1.0",
+        "uri": "http://creativecommons.org/publicdomain/zero/1.0",
+        "iconUri": "https://licensebuttons.net/p/zero/1.0/88x31.png",
+        "rightsIdentifier": "CC0-1.0",
+        "rightsIdentifierScheme": "SPDX",
+        "schemeUri": "https://spdx.org/licenses/",
+        "languageCode": "en"
+      },
+      "path": "data/raw/harvard_atlas/hs92_country_country_year.csv",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/13685107",
+      "expected_bytes": 30767251,
+      "expected_md5": "9c39659168dd5212f745572ba35b2a5c",
+      "bytes": 30767251,
+      "md5": "9c39659168dd5212f745572ba35b2a5c",
+      "sha256": "9f3e6ed88e3cf751cd8e7ab3b939c9fb216bec0944ed4add0cb8473a8013fda2",
+      "content_type": "text/comma-separated-values",
+      "status": "verified",
+      "downloaded_at": "2026-09-26T03:31:50.432226+00:00"
+    },
+    {
+      "source": "Harvard Growth Lab / Harvard Dataverse",
+      "dataset_doi": "doi:10.7910/DVN/T4CHWJ",
+      "dataset_version": "18.0",
+      "license": {
+        "name": "CC0 1.0",
+        "uri": "http://creativecommons.org/publicdomain/zero/1.0",
+        "iconUri": "https://licensebuttons.net/p/zero/1.0/88x31.png",
+        "rightsIdentifier": "CC0-1.0",
+        "rightsIdentifierScheme": "SPDX",
+        "schemeUri": "https://spdx.org/licenses/",
+        "languageCode": "en"
+      },
+      "path": "data/raw/harvard_atlas/hs92_country_product_year_4.csv",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/13685110",
+      "expected_bytes": 451749132,
+      "expected_md5": "5d87b2ac45517bf4e0e50600140672e5",
+      "bytes": 451749132,
+      "md5": "5d87b2ac45517bf4e0e50600140672e5",
+      "sha256": "06c77ef4c9e3a3afe9aaac6d053e11209275d09eb91f82de7b2a54d37f9c25e2",
+      "content_type": "text/comma-separated-values",
+      "status": "verified",
+      "downloaded_at": "2026-09-26T03:35:47.035852+00:00"
+    },
+    {
+      "source": "Figshare / Patelli (2022)",
+      "dataset_doi": "10.6084/m9.figshare.20167700.v1",
+      "license": {
+        "value": 1,
+        "name": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "path": "data/raw/figshare_integrated/universal_database.zip",
+      "url": "https://ndownloader.figshare.com/files/36062336",
+      "expected_bytes": 45145124,
+      "expected_md5": "d25e9b72e3b6cd0b58ffec037e1e4799",
+      "role": "supplement_only; HS2 goods + services, 1996-2018; not HS4 ECI/PCI",
+      "bytes": 45145124,
+      "md5": "d25e9b72e3b6cd0b58ffec037e1e4799",
+      "sha256": "a316ef8f5f89c22190d9d71b5b6be1f512f7d2d7fc70d270105553808ade506c",
+      "content_type": "application/zip",
+      "status": "verified",
+      "downloaded_at": "2026-09-26T03:35:53.932945+00:00"
+    },
+    {
+      "source": "UN Comtrade public reference",
+      "url": "https://comtradeapi.un.org/files/v1/app/reference/Reporters.json",
+      "path": "data/raw/un_comtrade_reference/Reporters.json",
+      "bytes": 80831,
+      "md5": "c3649c63e5150d1db78bcadead698296",
+      "sha256": "f2a1d78949089831c1fc7714e009996887db724a8d5a43379cdc37be9449f74b",
+      "status": "verified_local_json",
+      "checked_at": "2026-09-26T03:36:01.188832+00:00",
+      "official_checksum_available": false,
+      "records": 255
+    },
+    {
+      "source": "UN Comtrade public reference",
+      "url": "https://comtradeapi.un.org/files/v1/app/reference/H0.json",
+      "path": "data/raw/un_comtrade_reference/H0.json",
+      "bytes": 1351970,
+      "md5": "7fcbcd08b8771f7086f7e313bff26eea",
+      "sha256": "05cd59ce7156f373214162eb6c2be702c924b41b795c098b4eb595429711ee07",
+      "status": "verified_local_json",
+      "checked_at": "2026-09-26T03:36:01.198908+00:00",
+      "official_checksum_available": false,
+      "records": 6382
+    }
+  ],
+  "updated_at": "2026-09-26T03:36:01.199402+00:00"
+}
